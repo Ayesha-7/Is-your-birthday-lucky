@@ -2,14 +2,20 @@
  const numberInput = document.querySelector("#number-input");
  const checkButton = document.querySelector("#check-button");
  const outputMsg = document.querySelector("#output");
+ const privacyMsg = document.querySelector(".privacy-notice");
+ const closeButton = document.querySelector("#close-button");
 
  console.log(dateInput.value)
  console.log(numberInput.value)
  console.log(checkButton)
  outputMsg.style.display = "none";
+ privacyMsg.style.display = "block";
 
  //  document.querySelector('#somedivorspan').setAttribute('disabled', true);
 
+ closeButton.addEventListener("click", function hidePolicyMsg(){
+    privacyMsg.style.display = "none";
+ })
 
  checkButton.addEventListener("click", function validateInput() {
      outputMsg.style.display = "none";
