@@ -41,6 +41,6 @@
      if (sum % numInput == 2) {
          showMessage("Lucky You!!✨ Your birthdate is lucky🥳🍀");
      } else {
-         showMessage("Sorry🙁 your birthdate is not lucky....But hey luck wuck kuch nahi hota....You are the best!✨")
+         showMessage("Your birthdate is not lucky....But hey luck wuck kuch nahi hota....Cheer up✨")
      }
  }
