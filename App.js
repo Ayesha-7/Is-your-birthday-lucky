@@ -4,33 +4,36 @@
  const outputMsg = document.querySelector("#output");
  const privacyMsg = document.querySelector(".privacy-notice");
  const closeButton = document.querySelector("#close-button");
+ const delayGif = document.querySelector("#delay-gif");
 
- console.log(dateInput.value)
- console.log(numberInput.value)
- console.log(checkButton)
+ delayGif.style.display = "none";
  outputMsg.style.display = "none";
  privacyMsg.style.display = "block";
 
  //  document.querySelector('#somedivorspan').setAttribute('disabled', true);
 
- closeButton.addEventListener("click", function hidePolicyMsg(){
-    privacyMsg.style.display = "none";
+ closeButton.addEventListener("click", function hidePolicyMsg() {
+     privacyMsg.style.display = "none";
  })
 
  checkButton.addEventListener("click", function validateInput() {
      outputMsg.style.display = "none";
      var numInput = Number(numberInput.value);
      var birthdate = dateInput.value.replaceAll("-", "");
-     console.log(numInput);
-     console.log(birthdate);
 
      if (dateInput.value == "" || numberInput.value == "") {
          showMessage("❗ All fields should be filled");
      } else if (numInput <= 0 || numberInput.value == "") {
          showMessage("❗ Enter a number greater than zero");
      } else {
-     checkBirthdateLucky(numInput, birthdate);
- }
+         output.style.display = 'none'
+         delayGif.style.display = 'block'
+         setTimeout(() => {
+             output.style.display = 'block'
+             delayGif.style.display = 'none'
+             checkBirthdateLucky(numInput, birthdate)
+         }, 3300)
+     }
  })
 
  function showMessage(msg) {
@@ -47,6 +50,6 @@
      if (sum % numInput == 2) {
          showMessage("Lucky You!!✨ Your birthdate is lucky🥳🍀");
      } else {
-         showMessage("Your birthdate is not lucky....But hey luck wuck kuch nahi hota....Cheer up✨")
+         showMessage("Your birthdate is not lucky 🙁")
      }
  }

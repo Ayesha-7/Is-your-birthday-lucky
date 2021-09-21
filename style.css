@@ -74,7 +74,14 @@ label {
 }
 
 .button:hover {
+    cursor: pointer;
     background-color: rgb(250, 191, 54);
+}
+
+#delay-gif{
+    max-width: 200px;
+    max-height: 200px;
+    margin: auto;
 }
 
 .output{
@@ -108,8 +115,8 @@ footer{
 }
 
 .privacy-notice button:hover{
-    color: white;
-    background-color: rgb(1, 35, 46);
+    color: rgb(1, 35, 46);
+    background-color: whitesmoke;
 }
 .privacy-notice{
     margin-bottom: 0.5rem;
@@ -120,6 +127,10 @@ footer{
 .footer .link{
     font-size: 30px;
     color: black;
+}
+
+.footer .link:hover{
+    font-size: 35px;
 }
 
 .footer ul {
