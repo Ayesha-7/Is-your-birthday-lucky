@@ -47,7 +47,7 @@
          sum = sum + Number(birthdate.charAt(i));
      }
 
-     if (sum % numInput == 2) {
+     if (sum % numInput == 0) {
          showMessage("Lucky You!!✨ Your birthdate is lucky🥳🍀");
      } else {
          showMessage("Your birthdate is not lucky 🙁")
